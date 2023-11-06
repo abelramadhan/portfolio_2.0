@@ -17,7 +17,7 @@ const Contact = () => {
                             className='text-white/50'>
                             Interested?
                         </Heading>
-                        <Heading as='h2'>Let's do someting together!</Heading>
+                        <Heading as='h2'>Let&apos;s do someting together!</Heading>
                     </div>
                     <Button>Contact Me</Button>
                 </div>

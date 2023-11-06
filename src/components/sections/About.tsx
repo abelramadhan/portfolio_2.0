@@ -24,7 +24,7 @@ const About = () => {
                     <div className='space-y-2 flex-1 min-w-[300px]'>
                         <Text as='muted'>
                             As a passionate software engineer, I excel in React, TypeScript, Node, Laravel, and SQL.
-                            With a stellar 3.92 GPA from Brawijaya University, I've gained experience at Sekawan Media
+                            With a stellar 3.92 GPA from Brawijaya University, I have gained experience at Sekawan Media
                             and the International Relations Office FILKOM UB, delivering top-notch web applications.
                         </Text>
                         <Text as='muted'>

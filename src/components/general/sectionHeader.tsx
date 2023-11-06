@@ -10,9 +10,7 @@ const SectionHeader = ({ number, title }: SectionHeaderProps) => (
     <div className='inline-flex items-center'>
         <Heading
             as='h3'
-            className='opacity-40 mr-3'>
-            //
-        </Heading>
+            className='opacity-40 mr-3'></Heading>
         <Heading
             as='h3'
             className='mr-2  opacity-40'>
