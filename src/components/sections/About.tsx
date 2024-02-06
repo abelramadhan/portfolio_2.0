@@ -21,30 +21,29 @@ const About = () => {
                     title='About Me'
                 />
                 <div className='flex flex-wrap-reverse gap-x-12 gap-y-8'>
-                    <div className='space-y-2 flex-1 min-w-[300px]'>
+                    <div className='space-y-4 flex-1 min-w-[300px]'>
                         <Text as='muted'>
-                            As a passionate software engineer, I excel in React, TypeScript, Node, Laravel, and SQL.
-                            With a stellar 3.92 GPA from Brawijaya University, I have gained experience at Sekawan Media
-                            and the International Relations Office FILKOM UB, delivering top-notch web applications.
+                            So... you want to know more about me? well then, I am a Software Engineer, although i
+                            specialize in frontend, but i also do fullstack development. I graduated from Brawijaya
+                            University majoring in Computer Science with a GPA of 3.92. I have various work exprience in
+                            my field ranging from internships to working full time in companies
                         </Text>
                         <Text as='muted'>
-                            My leadership skills were further honed as a web programming practicum assistant at FILKOM
-                            UB Learning Lab, where I mentored aspiring developers in PHP, Laravel, MVC design patterns,
-                            JavaScript, and MySQL. I bring robust problem-solving capabilities to collaborative
-                            environments, driven by an unwavering enthusiasm for innovative software development.
+                            Okay then, let's get personal. During my free time i like to do sports such as badminton
+                            with friends, i also like to spend time playing a bit of guitar. Also, as do most IT guys, i
+                            like video games.
                         </Text>
                     </div>
                     <div className='relative'>
-                        <div className='border-4 w-fit border-white'>
+                        <div className='border w-fit border-muted-foreground/50 overflow-clip p-1 bg-black/40 backdrop-blur-md'>
                             <Image
                                 src={ProfilePicture}
-                                className='grayscale h-40 w-40 sm:w-56 sm:h-56 hover:grayscale-0 transition-all object-cover  '
+                                className='grayscale h-auto aspect-square sm:w-56 w-full hover:grayscale-0 transition-all object-cover'
                                 alt='Abel'
                                 width={400}
                                 height={400}
                             />
                         </div>
-                        <div className='absolute top-5 left-5 h-40 w-40 sm:w-56 sm:h-56 -z-10 aspect-square border-4 border-white' />
                     </div>
                 </div>
                 <div className='space-y-4'>

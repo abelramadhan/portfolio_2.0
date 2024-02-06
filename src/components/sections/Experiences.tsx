@@ -21,12 +21,27 @@ type Tab = {
 
 const tabs: Tab[] = [
     {
+        label: 'Erajaya',
+        value: 'erajaya',
+        role: [
+            {
+                title: 'Frontend Engineer Specialist',
+                date: 'Dec 2023 - Present',
+                description: [
+                    'Develop and maintain various B2B and B2C applications using Next.JS',
+                    'Implement best development practices to ensure a clean and maintanable codebase',
+                    'Participate in development sprints and collaborate with other teams',
+                ],
+            },
+        ],
+    },
+    {
         label: 'Sekawan Media',
         value: 'sekawan',
         role: [
             {
                 title: 'Frontend Developer',
-                date: 'June 2021 - Present',
+                date: 'Jun 2023 - Dec 2023',
                 description: [
                     'Develop the front-end side of various applications using Next.JS, React, Laravel Blade by utlizing tools such as Bootstrap, Tailwind, and Git.',
                     'Work closely with UI UX team to create visually appealing, interactive, and functional application interfaces',
@@ -35,7 +50,7 @@ const tabs: Tab[] = [
             },
             {
                 title: 'Fullstack Developer Intern',
-                date: 'Jan 2021 - June 2021',
+                date: 'Jan 2023 - Jun 2023',
                 description: [
                     'Develop various applications both in backend and frontend using technologies such as CodeIgniter, Laravel, Bootstrap, JQuery, React, NextJS, MySQL, PostgreSQL, and GIT',
                     "Work closely with system analyst and UI UX team to create a high-quality product that fulfill client's requirements",
@@ -93,7 +108,7 @@ interface TabsContentProps {
 const TabsContent = ({ tab }: TabsContentProps) => {
     // if (!tab) return null;
     return (
-        <div className='py-4 px-0 sm:py-0 sm:px-4 w-[21rem] sm:w-[34rem] min-h-[18rem] space-y-8'>
+        <div className='py-4 px-0 sm:py-0 sm:px-4 w-[100%] sm:w-[34rem] min-h-[18rem] space-y-8'>
             {tab?.role.map((role, index) => (
                 <div
                     key={index}
@@ -146,13 +161,13 @@ const TabsList = ({ activeTab, setActiveTab, tabs }: TabsListProps) => {
             </ul>
             {width && width > 640 ? (
                 <div
-                    className='relative sm:absolute border-l-2 border-white left-0 h-[32px] transition-all ease-in-out duration-200'
-                    style={{ top: 32 * activeTab }}
+                    className='relative sm:absolute border-l-2 border-white left-0 h-[40px] transition-all ease-in-out duration-200'
+                    style={{ top: 40 * activeTab }}
                 />
             ) : (
                 <div
-                    className='relative sm:absolute border-b-2 border-white left-0 w-[150px] transition-all ease-in-out duration-200'
-                    style={{ left: 150 * activeTab }}
+                    className='relative sm:absolute border-b-2 border-white left-0 w-[170px] transition-all ease-in-out duration-200'
+                    style={{ left: 170 * activeTab }}
                 />
             )}
         </div>
@@ -172,7 +187,7 @@ const TabsItem = ({ tab, onClick, isActive }: TabsItemProps) => {
         <li>
             <button
                 className={cn(
-                    'w-[150px] sm:w-full h-[32px] px-2 text-left inline-flex items-center transition-colors',
+                    'w-[170px] sm:w-full h-[40px] px-4 text-left inline-flex items-center transition-colors',
                     isActive ? activeClassName : inactiveClassName
                 )}
                 onClick={onClick}>
