@@ -29,9 +29,9 @@ const About = () => {
                             my field ranging from internships to working full time in companies
                         </Text>
                         <Text as='muted'>
-                            Okay then, let's get personal. During my free time i like to do sports such as badminton
-                            with friends, i also like to spend time playing a bit of guitar. Also, as do most IT guys, i
-                            like video games.
+                            Okay then, let&apos;s get personal. During my free time i like to do sports such as
+                            badminton with friends, i also like to spend time playing a bit of guitar. Also, as do most
+                            IT guys, i like video games.
                         </Text>
                     </div>
                     <div className='relative'>
