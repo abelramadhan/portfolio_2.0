@@ -36,56 +36,58 @@ const Navbar = () => {
     const { width } = useWindowSize();
 
     return (
-        <header className='w-full inline-flex justify-between items-center h-16 px-4 lg:px-[20%] border-b border-gray-800 absolute top-0 z-10'>
+        <header className='w-full inline-flex justify-start items-center h-16 px-4 lg:px-[20%] border-b border-gray-800 absolute top-0 z-10'>
             <div className='font-bold text-lg '>
                 <TypeAnimation
                     sequence={['...', 3000, 'Abel Ramadhan']}
                     preRenderFirstString
                 />
             </div>
-            <nav>
-                {width && width > 768 ? (
-                    <ul className='flex items-center space-x-4'>
-                        {navMenus.map((navMenu, index) => (
-                            <NavMenuItem
-                                key={index}
-                                name={navMenu.name}
-                                path={navMenu.path}
-                                index={index}
-                            />
-                        ))}
-                    </ul>
-                ) : (
-                    <Sheet>
-                        <SheetTrigger>
-                            <Button
-                                variant={'ghost'}
-                                size={'icon'}>
-                                <MenuIcon className='h-6 w-6' />
-                            </Button>
-                        </SheetTrigger>
-                        <SheetContent className='w-[320px] sm:w-[540px]'>
-                            <SheetHeader className='text-start'>
-                                <TypeAnimation
-                                    sequence={['...', 3000, 'Abel Ramadhan']}
-                                    preRenderFirstString
-                                    className='font-bold'
+            {/* <Suspense>
+                <nav>
+                    {width && width > 768 ? (
+                        <ul className='flex items-center space-x-4'>
+                            {navMenus.map((navMenu, index) => (
+                                <NavMenuItem
+                                    key={index}
+                                    name={navMenu.name}
+                                    path={navMenu.path}
+                                    index={index}
                                 />
-                            </SheetHeader>
-                            <ul className='space-y-4 mt-6'>
-                                {navMenus.map((navMenu, index) => (
-                                    <NavMenuItem
-                                        key={index}
-                                        name={navMenu.name}
-                                        path={navMenu.path}
-                                        index={index}
+                            ))}
+                        </ul>
+                    ) : (
+                        <Sheet>
+                            <SheetTrigger>
+                                <Button
+                                    variant={'ghost'}
+                                    size={'icon'}>
+                                    <MenuIcon className='h-6 w-6' />
+                                </Button>
+                            </SheetTrigger>
+                            <SheetContent className='w-[320px] sm:w-[540px]'>
+                                <SheetHeader className='text-start'>
+                                    <TypeAnimation
+                                        sequence={['...', 3000, 'Abel Ramadhan']}
+                                        preRenderFirstString
+                                        className='font-bold'
                                     />
-                                ))}
-                            </ul>
-                        </SheetContent>
-                    </Sheet>
-                )}
-            </nav>
+                                </SheetHeader>
+                                <ul className='space-y-4 mt-6'>
+                                    {navMenus.map((navMenu, index) => (
+                                        <NavMenuItem
+                                            key={index}
+                                            name={navMenu.name}
+                                            path={navMenu.path}
+                                            index={index}
+                                        />
+                                    ))}
+                                </ul>
+                            </SheetContent>
+                        </Sheet>
+                    )}
+                </nav>
+            </Suspense> */}
         </header>
     );
 };

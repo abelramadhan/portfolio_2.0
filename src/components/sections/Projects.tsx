@@ -1,15 +1,12 @@
 import SectionHeader from '../general/sectionHeader';
-import { useIntersectionObserver } from '@uidotdev/usehooks';
 import Heading from '../ui/heading';
 import Text from '../ui/text';
 import Image, { StaticImageData } from 'next/image';
 
 import ScreenshotSSO from '../../../public/images/projects/sso-screenshot.png';
 import ScreenshotRace24 from '../../../public/images/projects/race24-screenshot.png';
-import ScreenshotVESD from '../../../public/images/projects/VESD-screenshot.png';
+import ScreenshotWWG from '../../../public/images/projects/wwg-screenshot.png';
 
-import Lock from '../../../public/icons/lock.svg';
-import GitHub from '../../../public/icons/github.svg';
 import { Separator } from '../ui/separator';
 import { FolderRootIcon } from 'lucide-react';
 import dynamicIconImports from 'lucide-react/dynamicIconImports';
@@ -51,14 +48,17 @@ const featuredProject: Project[] = [
         links: [{ icon: 'github', url: 'https://github.com/abelramadhan/Race24', alt: 'GitHub Repo' }],
     },
     {
-        title: 'Very Epic Samurai Duel',
+        title: 'Where We Go',
         description: [
-            'A digital form of the traditional matemathics card game, this game allows players to play online together and compete to solve math problem',
-            'This game is built with Next JS while utilizing websockets to allow multiplayer interactions.',
+            'Plan your activities with your friends in this application!. this is a to go list with online features where you can have groups and list activities together',
+            'This web app application is built with Next JS as the frontend and supabase as the backend',
         ],
-        image: ScreenshotVESD,
-        tech: ['C++', 'OpenGL'],
-        links: [{ icon: 'github', url: 'https://github.com/abelramadhan/VeryEpicSamuraiBattle', alt: 'GitHub Repo' }],
+        image: ScreenshotWWG,
+        tech: ['NextJS', 'Supabase', 'TailwindCSS'],
+        links: [
+            { icon: 'github', url: 'https://github.com/abelramadhan/where-we-go', alt: 'GitHub Repo' },
+            { icon: 'link', url: 'https://where-we-go-ten.vercel.app/dashboard', alt: 'Where We Go' },
+        ],
     },
 ];
 
@@ -80,11 +80,12 @@ const otherProjects: Project[] = [
         links: [{ icon: 'github', url: 'https://github.com/abelramadhan/VeryEpicSamuraiBattle', alt: 'GitHub Repo' }],
     },
     {
-        title: 'Kaos Chaos',
+        title: 'Very Epic Samurai Duel',
         description: [
-            'A prototype of an e-commerce android app where users can sell their shirt design and also buy from others',
+            'A digital form of the traditional matemathics card game, this game allows players to play online together and compete to solve math problem',
+            'This game is built with Next JS while utilizing websockets to allow multiplayer interactions.',
         ],
-        tech: ['Android Studio', 'Kotlin', 'Firebase'],
+        tech: ['C++', 'OpenGL'],
         links: [{ icon: 'github', url: 'https://github.com/abelramadhan/VeryEpicSamuraiBattle', alt: 'GitHub Repo' }],
     },
 ];
@@ -149,7 +150,7 @@ const FeaturedProjectCard = ({ project }: ProjectCardProps) => {
                         {project.title}
                     </Heading>
                 </div>
-                <div className='p-0 sm:p-4 shadow-lg rounded-md bg-transparent rounded-b-lg sm:rounded-b-md sm:bg-black/50 backdrop-blur-none sm:backdrop-blur-lg max-w-full sm:max-w-md w-full space-y-2 !border !border-gray-200/10'>
+                <div className='p-0 sm:p-4 shadow-lg rounded-md bg-transparent rounded-b-lg sm:rounded-b-md sm:bg-black/50 backdrop-blur-none sm:backdrop-blur-lg max-w-full sm:max-w-md w-full space-y-2 border-none sm:border !border-gray-200/10'>
                     {project.description.map((desc, index) => (
                         <Text
                             key={index}
@@ -169,7 +170,7 @@ const FeaturedProjectCard = ({ project }: ProjectCardProps) => {
                         </Text>
                     ))}
                 </div>
-                <div className='flex flex-row justify-end'>
+                <div className='flex flex-row justify-end gap-3'>
                     {project.links.map((link, index) => (
                         <a
                             key={index}
